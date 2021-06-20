@@ -1,0 +1,247 @@
+/*propiedades generales*/
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+body{
+    line-height: 1.5;
+    background-color: rgba(180, 215, 255, 0.651);
+}
+main{
+    height: 700px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+/*botones del nav*/
+.button{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 15px;
+    background: rgba(47, 113, 255, 0.658);
+    color: #FFF;
+    display: inline-block;
+    padding: 10px;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 3px 0px rgb(4, 4, 173);
+    border-radius: 50px;
+    line-height: normal;
+}
+.button:hover{
+    box-shadow: 0px 0px 0px;
+    padding-top: 10px;
+}
+header{
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background: rgb(0, 0, 85);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+/*logo del lado izquierdo*/
+header .logo{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    line-height: 80px;
+    flex-direction: row;
+    float: left;
+}
+/*botones del lado derecho*/
+header nav{
+    line-height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*para sombra de botones*/
+header nav a:hover{
+    background: rgb(12, 165, 236);
+    border-radius: 50px;
+}
+/*para centrar*/
+.wrapper{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+/*lista sin viñeta y horizontal*/
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    position: relative;
+}
+/*contenido dentro del video*/
+.content h1{
+    font-family: 'Petit Formal Script', cursive;
+    background: rgba(47, 113, 255, 0.658);
+    width: 100%;
+    text-align: center;
+}
+.content h2{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    background: rgba(47, 113, 255, 0.658);
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 15px;
+    background: rgba(47, 113, 255, 0.658);
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    line-height: normal;    
+}
+/*video*/
+.video{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.video video{
+    position:sticky;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 15%;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}   
+/*contacto whatsapp*/
+.contactoWp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 30px;
+    right: 30px;
+}
+/*footer con redes*/
+#footerRedes{
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    background: rgb(0, 0, 85);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#footerRedes ul li{
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: .2s;    
+}
+#footerRedes img{
+    width: 50%;
+    height: 50%;
+}
+#footerRedes ul:hover a{
+    filter: blur(1.25px); 
+}
+#footerRedes ul li a:hover{
+    filter: none; 
+}
+#footerRedes :hover{
+    transform: rotate(360deg);
+}
+/*para el grid servicios*/
+.gridServicios{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 216px 216px 216px;    
+    grid-template-areas: 
+    "titulo titulo"
+    "servicioUno servicioDos"
+    "servicioTres servicioCuatro"
+    "servicioCinco servicioSeis";
+    justify-items: stretch;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.gridServicios :hover{
+    transform: scale(1,1.05);
+    transition: 2s;
+    background-color: blanchedalmond;
+}
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+}
+
+.administrativo{
+    grid-area: servicioUno;
+    background-image: linear-gradient(rgb(131, 181, 255), rgb(0, 93, 233));
+    height: 100%;
+
+}
+.impositivo{
+    grid-area: servicioDos;
+    background-color: rgb(131, 255, 203);
+    height: 100%;
+}
+.contable{
+    grid-area: servicioTres; 
+    background-color: rgb(255, 160, 131);
+    height: 100%;
+}
+.laboral{
+    grid-area: servicioCuatro;
+    background-image:linear-gradient(rgb(234, 131, 255), rgb(147, 7, 175));
+    height: 100%;
+}
+.capacitaciones{
+    grid-area: servicioCinco;
+    background-image:linear-gradient(rgb(131, 230, 255), rgb(4, 153, 190));
+    height: 100%;
+}
+.auditoria{
+    grid-area: servicioSeis;
+    background-color: rgb(255, 191, 131);
+    height: 100%;
+}
+/*para el grid contacto*/
+.gridContacto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 300px 300px;    
+    grid-template-areas: 
+    "titulo titulo"
+    "contactoUno contactoDos"
+    "contactoTres contactoDos";
+    justify-items: stretch;
+    align-items: center;
+    box-sizing: border-box;
+}    
+.datos{
+    grid-area: contactoUno;
+    text-align: center;
+}
+.imagenContacto{
+    grid-area: contactoTres;
+    text-align: center;
+}
+.formulario{
+    grid-area: contactoDos;
+}
